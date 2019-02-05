@@ -1,0 +1,28 @@
+.header {
+  background-color: #43e895;
+  display: flex;
+  height: 3.75rem;
+  justify-content: center;
+  position: absolute;
+  width: 100vw;
+}
+
+.header-title {
+  align-self: flex-end;
+  color: #ffffff;
+  font-size: 1.0625rem;
+  margin-bottom: 0.75rem;
+}
+
+.header-map-icon-link {
+  bottom: 0;
+  display: inline-block;
+  position: absolute;
+  margin-right: 0.75rem;
+  right: 0;
+}
+
+.header-map-icon {
+  height: 2.25rem;
+  width: 2.25rem;
+}
