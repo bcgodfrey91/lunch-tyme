@@ -1,0 +1,32 @@
+.footer {
+  background: #2a2a2a;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  height: 3.75rem;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+}
+
+.footer-link {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-link:hover {
+  cursor: pointer;
+}
+
+.footer-link-image {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.footer-link p {
+  margin: 0;
+}
+

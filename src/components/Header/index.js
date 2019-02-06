@@ -5,7 +5,7 @@ import './Header.css';
 class Header extends Component {
   render() {
     return (
-      <div className="header">
+      <header className="header">
         <h1 className="header-title">
           Lunch Tyme
         </h1>
@@ -18,7 +18,7 @@ class Header extends Component {
             alt="Map Icon"
           />
         </a>
-      </div>
+      </header>
     );
   }
 }
