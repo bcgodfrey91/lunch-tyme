@@ -3,8 +3,10 @@
   display: flex;
   height: 3.75rem;
   justify-content: center;
-  position: absolute;
+  position: fixed;
+  top: 0;
   width: 100vw;
+  z-index: 2;
 }
 
 .header-title {
@@ -20,6 +22,10 @@
   position: absolute;
   margin-right: 0.75rem;
   right: 0;
+}
+
+.header-map-icon-link:hover {
+  cursor: pointer;
 }
 
 .header-map-icon {
