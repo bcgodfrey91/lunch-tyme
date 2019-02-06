@@ -6,9 +6,9 @@ class Header extends Component {
   render() {
     return (
       <header className="header">
-        <h1 className="header-title">
+        <p className="header-title">
           Lunch Tyme
-        </h1>
+        </p>
         <a
           className="header-map-icon-link"
         >
