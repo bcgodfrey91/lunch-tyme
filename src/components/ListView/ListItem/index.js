@@ -13,7 +13,6 @@ class ListItem extends Component {
   showDetails = (e) => {
     const body = document.querySelector('body');
     this.state.isShown === '' ? this.setState({ isShown: 'shown' }) : this.setState({ isShown: '' });
-    this.state.isShown === '' ? body.classList.add('noscroll') : body.classList.remove('noscroll');
   }
 
   render() {

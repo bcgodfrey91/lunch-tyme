@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../Header';
 import ListView from '../ListView';
-import Footer from '../Footer';
 import './App.css';
 
 class App extends Component {
@@ -36,7 +35,6 @@ class App extends Component {
           <div className="loader-container">
             <div className="loader"> loading </div>
           </div>
-          <Footer />
         </div>
       )
     }
@@ -47,7 +45,6 @@ class App extends Component {
         <ListView
           restaurants={restaurants}
         />
-        <Footer />
       </div>
     );
   }
