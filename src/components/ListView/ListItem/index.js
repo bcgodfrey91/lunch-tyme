@@ -24,24 +24,27 @@ class ListItem extends Component {
       location,
     } = this.props.restaurant;
     const { isShown } = this.state;
+
     return (
-      <div className="list-item" onClick={this.showDetails}>
-        <img
-          className="list-item-background-image"
-          src={backgroundImageURL}
-          alt="List Item Background"
-        />
+      <div className={`list-item ${isShown}`} onClick={this.showDetails}>
         <div className="list-item-contents">
-          <p className="list-item-name">{name}</p>
-          <p className="list-item-category">{category}</p>
+          <img
+            className="list-item-background-image"
+            src={backgroundImageURL}
+            alt="List Item Background"
+          />
+          <div className="list-item-details">
+            <p className="list-item-name">{name}</p>
+            <p className="list-item-category">{category}</p>
+          </div>
+          <PopUp
+            isShown={isShown}
+            name={name}
+            category={category}
+            contact={contact}
+            location={location}
+          />
         </div>
-        <PopUp
-          isShown={isShown}
-          name={name}
-          category={category}
-          contact={contact}
-          location={location}
-        />
       </div>
     );
   }

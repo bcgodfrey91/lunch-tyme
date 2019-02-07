@@ -1,12 +1,6 @@
 .pop-up {
-  background: white;
+  background: #ffffff;
   display: none;
-  height: 100vh;
-  margin-top: 4.5rem;
-  overflow: scroll;
-  position: fixed;
-  right: 0;
-  top: 0;
   width: 100%;
 }
 
@@ -64,4 +58,5 @@
 
 .pop-up-item-social {
   margin: 0;
+  padding-bottom: 1rem;
 }
