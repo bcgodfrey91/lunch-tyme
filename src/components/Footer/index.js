@@ -7,14 +7,14 @@ class Footer extends Component {
   render() {
     return (
       <footer className="footer">
-        <button className="footer-link">
+        <div className="footer-link">
           <img src={lunch} alt="Lunch Icon" className="footer-link-image" />
           <p>Lunch</p>
-        </button>
-        <button className="footer-link">
+        </div>
+        <div className="footer-link">
           <img src={internets} alt="Internets Icon" className="footer-link-image" />
           <p>Internets</p>
-        </button>
+        </div>
       </footer>
     );
   }

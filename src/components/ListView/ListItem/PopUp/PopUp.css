@@ -1,0 +1,62 @@
+.pop-up {
+  background: white;
+  display: none;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.pop-up.shown {
+  align-items: center;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+}
+
+.pop-up-map {
+  height: 11.25rem;
+  width: 100%;
+}
+
+.pop-up-divider {
+  background-color: #34b379;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 4.5rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.pop-up-divider p {
+  margin: 0 0 0 0.75rem;
+}
+
+.pop-up-item-name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.pop-up-item-category {
+  font-size: 0.75rem;
+  padding-top: 0.375rem;
+}
+
+.pop-up-contents {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.pop-up-address-container {
+  margin: 0;
+}
+
+.pop-up-item-phone,
+.pop-up-item-social {
+  margin: 0;
+}

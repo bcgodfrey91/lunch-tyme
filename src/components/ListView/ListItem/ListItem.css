@@ -18,11 +18,10 @@
   flex-direction: column;
   height: 100%;
   justify-content: flex-end;
-  margin-left: 0.75rem;
 }
 
 .list-item-contents p {
-  margin: 0;
+  margin: 0 0 0 0.75rem;
 }
 
 .list-item-name {

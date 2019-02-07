@@ -9,7 +9,7 @@ class Header extends Component {
         <p className="header-title">
           Lunch Tyme
         </p>
-        <button
+        <div
           className="header-map-icon-link"
         >
           <img
@@ -17,7 +17,7 @@ class Header extends Component {
             src={mapIcon}
             alt="Map Icon"
           />
-        </button>
+        </div>
       </header>
     );
   }

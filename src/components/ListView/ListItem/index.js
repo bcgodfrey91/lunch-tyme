@@ -1,11 +1,32 @@
 import React, { Component } from 'react';
+import PopUp from './PopUp';
 import './ListItem.css';
 
 class ListItem extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isShown: '',
+    };
+  }
+
+  showDetails = (e) => {
+    const body = document.querySelector('body');
+    this.state.isShown === '' ? this.setState({ isShown: 'shown' }) : this.setState({ isShown: '' });
+    this.state.isShown === '' ? body.classList.add('noscroll') : body.classList.remove('noscroll');
+  }
+
   render() {
-    const { name, category, backgroundImageURL } = this.props;
+    const {
+      name,
+      category,
+      backgroundImageURL,
+      contact,
+      location,
+    } = this.props.restaurant;
+    const { isShown } = this.state;
     return (
-      <div className="list-item">
+      <div className="list-item" onClick={this.showDetails}>
         <img
           className="list-item-background-image"
           src={backgroundImageURL}
@@ -15,6 +36,13 @@ class ListItem extends Component {
           <p className="list-item-name">{name}</p>
           <p className="list-item-category">{category}</p>
         </div>
+        <PopUp
+          isShown={isShown}
+          name={name}
+          category={category}
+          contact={contact}
+          location={location}
+        />
       </div>
     );
   }
