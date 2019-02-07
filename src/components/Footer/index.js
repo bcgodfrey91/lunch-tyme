@@ -9,11 +9,11 @@ class Footer extends Component {
       <footer className="footer">
         <div className="footer-link">
           <img src={lunch} alt="Lunch Icon" className="footer-link-image" />
-          <p>Lunch</p>
+          <p>lunch</p>
         </div>
         <div className="footer-link">
           <img src={internets} alt="Internets Icon" className="footer-link-image" />
-          <p>Internets</p>
+          <p>internets</p>
         </div>
       </footer>
     );

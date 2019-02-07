@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import MapContainer from './MapContainer';
 import './PopUp.css';
 
 class ListItem extends Component {
@@ -12,7 +13,7 @@ class ListItem extends Component {
     } = this.props;
 
     const formattedPhone = () => {
-      if (contact.formattedPhone) {
+      if (contact && contact.formattedPhone) {
         return (
           <Fragment>
             <p className="pop-up-item-phone">{contact.formattedPhone}</p>
@@ -23,10 +24,10 @@ class ListItem extends Component {
     }
 
     const twitter = () => {
-      if (contact.twitter) {
+      if (contact && contact.twitter) {
         return (
           <Fragment>
-            <p className="pop-up-item-phone">{contact.twitter}</p>
+            <p className="pop-up-item-social">@{contact.twitter}</p>
           </Fragment>
         );
       }
@@ -36,7 +37,10 @@ class ListItem extends Component {
     return (
       <div className={`pop-up ${isShown}`}>
         <div className="pop-up-map">
-          {lat}, {lng}
+          <MapContainer
+            lat={lat}
+            lng={lng}
+          />
         </div>
         <div className="pop-up-divider">
           <p className="pop-up-item-name">{name}</p>
@@ -44,10 +48,10 @@ class ListItem extends Component {
         </div>
         <div className="pop-up-contents">
           <div className="pop-up-address-container">
-            <div className="pop-up-address">{address}</div>
-            <div className="city-state-container">
+            <p className="pop-up-address">{address}</p>
+            <p className="city-state-container">
               {city}, {state} {postalCode}
-            </div>
+            </p>
           </div>
           {formattedPhone()}
           {twitter()}

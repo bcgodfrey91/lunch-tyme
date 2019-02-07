@@ -2,6 +2,8 @@
   background: white;
   display: none;
   height: 100vh;
+  margin-top: 4.5rem;
+  overflow: scroll;
   position: fixed;
   right: 0;
   top: 0;
@@ -13,7 +15,6 @@
   color: black;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   z-index: 1;
 }
 
@@ -32,7 +33,8 @@
   width: 100%;
 }
 
-.pop-up-divider p {
+.pop-up-divider p,
+.pop-up-contents p  {
   margin: 0 0 0 0.75rem;
 }
 
@@ -49,14 +51,17 @@
 .pop-up-contents {
   display: flex;
   flex-direction: column;
+  font-size: 1rem;
   width: 100%;
 }
 
 .pop-up-address-container {
-  margin: 0;
+  margin-top: 1rem;
+}
+.pop-up-item-phone {
+  padding: 1.625rem 0;
 }
 
-.pop-up-item-phone,
 .pop-up-item-social {
   margin: 0;
 }
