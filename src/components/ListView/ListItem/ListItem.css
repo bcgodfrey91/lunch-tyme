@@ -62,8 +62,8 @@
 @media screen and (min-width: 48rem) {
   .list-item {
     box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.2);
-    max-width: 20.5rem;
     margin: 1rem;
+    max-width: 20.5rem;
   }
 }
 

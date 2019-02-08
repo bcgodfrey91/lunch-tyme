@@ -1,7 +1,7 @@
 .pop-up {
   align-items: center;
-  color: black;
   background: #ffffff;
+  color: black;
   flex-direction: column;
   opacity: 0;
   transform: translateY(-3rem);
