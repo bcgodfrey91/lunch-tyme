@@ -53,6 +53,12 @@
   padding: 0.375rem 0;
 }
 
+@media screen and (min-width: 26rem) {
+  .list-item {
+    margin-bottom: 1rem;
+  }
+}
+
 @media screen and (min-width: 48rem) {
   .list-item {
     box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.2);
@@ -78,6 +84,10 @@
 }
 
 @media screen and (min-width: 70rem) {
+  .list-item {
+    max-width: 29rem;
+  }
+
   .list-item-contents {
     min-height: 15rem;
   }

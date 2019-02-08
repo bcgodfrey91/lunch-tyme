@@ -4,7 +4,6 @@ import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 const mapStyles = {
   display: 'block',
   height: '11.25rem',
-  maxWidth: '26rem',
   position: 'relative',
   width: '100%',
 };
