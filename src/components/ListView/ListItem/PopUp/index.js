@@ -36,10 +36,7 @@ class ListItem extends Component {
     return (
       <div className="pop-up">
         <div className="pop-up-map">
-          <MapContainer
-            lat={lat}
-            lng={lng}
-          />
+  
         </div>
         <div className="pop-up-divider">
           <p className="pop-up-item-name">{name}</p>

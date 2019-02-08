@@ -1,9 +1,15 @@
+.list-item {
+  max-width: 26rem;
+  width: 100%;
+}
+
 .list-item-contents {
   color: #ffffff;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   height: 11.25rem;
+  justify-content: flex-end;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -36,4 +42,47 @@
 .list-item-category {
   font-size: 0.75rem;
   padding: 0.375rem 0;
+}
+
+@media screen and (min-width: 48rem) {
+  .list-item {
+    box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.2);
+    max-width: 20.5rem;
+    min-height: 37rem;
+    margin: 1rem;
+  }
+}
+
+@media screen and (min-width: 53rem) {
+  .list-item {
+    max-width: 23rem;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  .list-item {
+    max-width: 26rem;
+  }
+
+  .list-item-contents {
+    min-height: 14rem;
+  }
+
+  .list-item {
+    min-height: 39.75rem;
+  }
+}
+
+@media screen and (min-width: 70rem) {
+  .list-item {
+    max-width: 29rem;
+  }
+
+  .list-item-contents {
+    min-height: 15rem;
+  }
+
+  .list-item {
+    min-height: 40.5rem;
+  }
 }

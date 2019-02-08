@@ -11,7 +11,6 @@ class ListItem extends Component {
   }
 
   showDetails = (e) => {
-    const body = document.querySelector('body');
     this.state.isShown === '' ? this.setState({ isShown: 'shown' }) : this.setState({ isShown: '' });
   }
 
@@ -26,7 +25,7 @@ class ListItem extends Component {
     const { isShown } = this.state;
 
     return (
-      <div className={`list-item ${isShown}`} onClick={this.showDetails}>
+      <div className="list-item" onClick={this.showDetails}>
         <div className="list-item-contents">
           <img
             className="list-item-background-image"
@@ -37,14 +36,14 @@ class ListItem extends Component {
             <p className="list-item-name">{name}</p>
             <p className="list-item-category">{category}</p>
           </div>
-          <PopUp
-            isShown={isShown}
-            name={name}
-            category={category}
-            contact={contact}
-            location={location}
-          />
         </div>
+        <PopUp
+          isShown={isShown}
+          name={name}
+          category={category}
+          contact={contact}
+          location={location}
+        />
       </div>
     );
   }

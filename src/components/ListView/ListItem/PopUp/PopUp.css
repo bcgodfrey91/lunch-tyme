@@ -1,21 +1,17 @@
 .pop-up {
-  background: #ffffff;
-  display: none;
-  width: 100%;
-}
-
-.pop-up.shown {
   align-items: center;
   color: black;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
+  width: 100%;
   z-index: 1;
 }
 
 .pop-up-map {
   height: 11.25rem;
   width: 100%;
-}
+} 
 
 .pop-up-divider {
   background-color: #34b379;

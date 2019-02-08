@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import { Map, GoogleApiWrapper } from 'google-maps-react';
 
 const mapStyles = {
+  display: 'block',
   height: '11.25rem',
-  width: '100%'
+  maxWidth: '26rem',
+  position: 'relative',
+  width: '100%',
 };
 
 export class MapContainer extends Component {
