@@ -3,23 +3,21 @@
   color: black;
   background: #ffffff;
   flex-direction: column;
-  width: 100%;
-
-  visibility: hidden;
   opacity: 0;
   transform: translateY(-2rem);
-  z-index: -1;
   transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  visibility: hidden;
+  width: 100%;
+  z-index: -1;
 }
 
 .pop-up.shown {
-  visibility: visible;
-  opacity: 1;
-  z-index: 1;
   box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.2);
+  opacity: 1;
   transform: translateY(0%);
   transition-delay: 0s, 0s, 0.3s;
-  padding-bottom: 1rem;
+  visibility: visible;
+  z-index: 1;
 }
 
 .pop-up-map,
@@ -63,6 +61,7 @@
   display: flex;
   flex-direction: column;
   font-size: 1rem;
+  padding-bottom: 1rem;
   width: 100%;
 }
 
@@ -75,4 +74,23 @@
 
 .pop-up-item-social {
   margin: 0;
+}
+
+@media screen and (min-width: 48rem) {
+  .pop-up.shown {
+    max-width: 20.5rem;
+    position: absolute;
+  }
+}
+
+@media screen and (min-width: 53rem) {
+  .pop-up.shown {
+    max-width: 23rem;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  .pop-up.shown {
+    max-width: 26rem;
+  }
 }
