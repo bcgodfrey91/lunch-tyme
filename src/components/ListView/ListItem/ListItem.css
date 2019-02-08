@@ -23,6 +23,7 @@
 }
 
 .shown .list-item-background-image {
+  pointer-events: none;
   z-index: 1;
 }
 
@@ -36,6 +37,7 @@
 }
 
 .shown .list-item-details {
+  pointer-events: none;
   z-index: 2;
 }
 
@@ -62,7 +64,7 @@
 @media screen and (min-width: 48rem) {
   .list-item {
     box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.2);
-    margin: 1rem;
+    margin: 2rem 1rem;
     max-width: 20.5rem;
   }
 }

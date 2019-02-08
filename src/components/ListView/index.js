@@ -3,6 +3,7 @@ import ListItem from './ListItem';
 import './ListView.css';
 
 class ListView extends Component {
+
   render() {
     const { restaurants } = this.props;
     const renderList = () => {

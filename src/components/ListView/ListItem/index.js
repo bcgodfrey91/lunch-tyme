@@ -3,17 +3,6 @@ import PopUp from './PopUp';
 import './ListItem.css';
 
 class ListItem extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isShown: false,
-    };
-  }
-
-  showDetails = () => {
-    !this.state.isShown ? this.setState({ isShown: true }) : this.setState({ isShown: false });
-  }
-
   render() {
     const {
       name,
@@ -22,11 +11,28 @@ class ListItem extends Component {
       contact,
       location,
     } = this.props.restaurant;
-    const { isShown } = this.state;
+    const uid = name.toLowerCase().replace(/[^\w\s]|_/g, "").split(" ").join("-");
+
+    const showDetails = (e) => {
+      const targ = e.target;
+      if (targ.className.includes('shown')) {
+        document.querySelectorAll(`.${uid}`).forEach(el => {
+          el.classList.remove('shown');
+        })
+      } else if (targ.className.includes(uid)) {
+        document.querySelectorAll('.shown').forEach(el => {
+          el.classList.remove('shown');
+        })
+
+        document.querySelectorAll(`.${uid}`).forEach(el => {
+          el.classList.add('shown');
+        })
+      }
+    }
 
     return (
       <div className="list-item">
-        <div className={`list-item-contents ${isShown ? 'shown' : ''}`} onClick={this.showDetails}>
+        <div className={`list-item-contents ${uid}`} onClick={showDetails}>
           <img
             className="list-item-background-image"
             src={backgroundImageURL}
@@ -38,8 +44,8 @@ class ListItem extends Component {
           </div>
         </div>
         <PopUp
-          isShown={isShown}
           name={name}
+          uid={uid}
           category={category}
           contact={contact}
           location={location}
