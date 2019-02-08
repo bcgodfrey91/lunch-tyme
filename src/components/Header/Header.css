@@ -6,7 +6,7 @@
   position: fixed;
   top: 0;
   width: 100vw;
-  z-index: 2;
+  z-index: 3;
 }
 
 .header-title {
@@ -17,19 +17,21 @@
   margin: 0 0 0.75rem 0;
 }
 
-.header-map-icon-link {
-  bottom: 0;
+.header-map-icon-container {
+  bottom: 0.25rem;
   display: inline-block;
   position: absolute;
   margin-right: 0.75rem;
   right: 0;
 }
 
-.header-map-icon-link:hover {
-  cursor: pointer;
-}
-
 .header-map-icon {
   height: 2.25rem;
   width: 2.25rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .header-title {
+    font-size: 1.4rem
+  }
 }

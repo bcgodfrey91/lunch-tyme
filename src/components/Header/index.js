@@ -10,7 +10,7 @@ class Header extends Component {
           Lunch Tyme
         </p>
         <div
-          className="header-map-icon-link"
+          className="header-map-icon-container"
         >
           <img
             className="header-map-icon"

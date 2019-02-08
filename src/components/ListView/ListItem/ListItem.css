@@ -13,7 +13,6 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.5));
 }
 
 .list-item-background-image {
@@ -23,11 +22,20 @@
   z-index: -1;
 }
 
+.shown .list-item-background-image {
+  z-index: 1;
+}
+
 .list-item-details {
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: flex-end;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.5));
+}
+
+.shown .list-item-details {
+  z-index: 2;
 }
 
 .list-item-details p {
