@@ -31,9 +31,8 @@ class App extends Component {
     if (isLoading) {
       return (
         <div className="app">
-          <Header />
           <div className="loader-container">
-            <div className="loader"> loading </div>
+            <div className="loader"></div>
           </div>
         </div>
       )

@@ -1,13 +1,12 @@
 import React, { Component, Fragment } from 'react';
 import ListItem from './ListItem';
 import './ListView.css';
-import helpers from '../../helpers.js'
 
 class ListView extends Component {
   render() {
     const { restaurants } = this.props;
     const renderList = () => {
-      return helpers.restaurants.map((restaurant, index) => {
+      return restaurants.map(restaurant => {
         return (
           <Fragment key={restaurant.name}>
             <ListItem
