@@ -6,12 +6,12 @@ class ListItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isShown: '',
+      isShown: false,
     };
   }
 
-  showDetails = (e) => {
-    this.state.isShown === '' ? this.setState({ isShown: 'shown' }) : this.setState({ isShown: '' });
+  showDetails = () => {
+    !this.state.isShown ? this.setState({ isShown: true }) : this.setState({ isShown: false });
   }
 
   render() {

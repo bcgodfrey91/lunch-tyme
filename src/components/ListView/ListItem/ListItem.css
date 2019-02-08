@@ -48,7 +48,6 @@
   .list-item {
     box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.2);
     max-width: 20.5rem;
-    min-height: 37rem;
     margin: 1rem;
   }
 }
@@ -67,22 +66,10 @@
   .list-item-contents {
     min-height: 14rem;
   }
-
-  .list-item {
-    min-height: 39.75rem;
-  }
 }
 
 @media screen and (min-width: 70rem) {
-  .list-item {
-    max-width: 29rem;
-  }
-
   .list-item-contents {
     min-height: 15rem;
-  }
-
-  .list-item {
-    min-height: 40.5rem;
   }
 }

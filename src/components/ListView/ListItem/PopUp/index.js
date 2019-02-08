@@ -5,6 +5,7 @@ import './PopUp.css';
 class ListItem extends Component {
   render() {
     const {
+      isShown,
       name,
       category,
       contact,
@@ -34,9 +35,9 @@ class ListItem extends Component {
     };
 
     return (
-      <div className="pop-up">
+      <div className={`pop-up ${isShown ? 'shown' : ''}`}>
         <div className="pop-up-map">
-  
+
         </div>
         <div className="pop-up-divider">
           <p className="pop-up-item-name">{name}</p>
