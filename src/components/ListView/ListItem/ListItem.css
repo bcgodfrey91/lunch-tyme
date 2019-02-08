@@ -27,11 +27,12 @@
 }
 
 .list-item-details {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.5));
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: flex-end;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.5));
+  z-index: -1;
 }
 
 .shown .list-item-details {

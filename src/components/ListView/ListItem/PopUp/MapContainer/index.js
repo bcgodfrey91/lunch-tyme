@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 
 const mapStyles = {
   display: 'block',
@@ -11,7 +11,7 @@ const mapStyles = {
 
 export class MapContainer extends Component {
   render() {
-    const { lat, lng } = this.props;
+    const { lat, lng, restaurantName } = this.props;
     return (
       <Map
         google={this.props.google}
@@ -21,7 +21,19 @@ export class MapContainer extends Component {
           lat,
           lng
         }}
-      />
+      >
+        <Marker
+          onClick={this.onMarkerClick}
+          name={'Current location'}
+          icon={{
+            height: "1rem",
+            name: { restaurantName },
+            title: { restaurantName },
+            url: "https://i.imgur.com/UFUz1Rj.png",
+            width: "1rem"
+          }}
+        />
+      </Map>
     );
   }
 }

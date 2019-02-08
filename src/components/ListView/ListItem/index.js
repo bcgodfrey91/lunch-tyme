@@ -25,8 +25,8 @@ class ListItem extends Component {
     const { isShown } = this.state;
 
     return (
-      <div className={`list-item ${isShown ? 'shown' : ''}`} onClick={this.showDetails}>
-        <div className="list-item-contents">
+      <div className="list-item">
+        <div className={`list-item-contents ${isShown ? 'shown' : ''}`} onClick={this.showDetails}>
           <img
             className="list-item-background-image"
             src={backgroundImageURL}

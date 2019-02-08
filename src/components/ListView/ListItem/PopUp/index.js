@@ -37,7 +37,11 @@ class ListItem extends Component {
     return (
       <div className={`pop-up ${isShown ? 'shown' : ''}`}>
         <div className="pop-up-map">
-
+          <MapContainer
+            lat={lat}
+            lng={lng}
+            restaurantName={name}
+          />
         </div>
         <div className="pop-up-divider">
           <p className="pop-up-item-name">{name}</p>
